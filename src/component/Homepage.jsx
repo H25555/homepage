@@ -1,5 +1,6 @@
 import React from "react";
-import banner from "../img/Banner_Homepage3_1920x900_6deacc2839.webp"
+import banner from "../img/Banner_Homepage3_1920x900_6deacc2839.webp";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
     return (
@@ -56,10 +57,11 @@ const Homepage = () => {
                     >
                         <i className="fa fa-bars" />
                     </a>
-                    <a href="#" className="w3-bar-item btn w3-theme-d2 fs-4">
+                        <Link to="/" className="w3-bar-item btn w3-theme-d2 fs-4">
                         <i className="fa fa-home w3-margin-right" />
                         NHP SHIP
-                    </a>
+                        </Link>
+                    
                     <div className="w3-dropdown-hover w3-hide-small">
                         <p className="btn w3-theme-d2 fs-4" title="Notifications">
                             Dịch vụ <i className="fa fa-caret-down" />
@@ -98,9 +100,11 @@ const Homepage = () => {
                             Tài xế <i className="fa fa-caret-down" />
                         </button>
                         <div className="w3-dropdown-content w3-card-4 w3-bar-block">
-                            <a href="#" className="w3-bar-item w3-button fs-5">
-                                Đăng ký tài xế
-                            </a>
+                            <Link to="/driver-register" className="w3-bar-item w3-button fs-5">
+                                
+                                    Đăng ký tài xế
+                                
+                            </Link>
                             <a href="#" className="w3-bar-item w3-button fs-5">
                                 Cẩm nang tài xế
                             </a>
@@ -182,37 +186,6 @@ const Homepage = () => {
                 />
 
             </div>
-            {/* Modal */}
-            <div id="id01" className="w3-modal">
-                <div className="w3-modal-content w3-card-4 w3-animate-top">
-                    <header className="w3-container w3-teal w3-display-container">
-                        <span
-                            onclick="document.getElementById('id01').style.display='none'"
-                            className="w3-button w3-teal w3-display-topright"
-                        >
-                            <i className="fa fa-remove" />
-                        </span>
-                        <h4>Oh snap! We just showed you a modal..</h4>
-                        <h5>
-                            Because we can <i className="fa fa-smile-o" />
-                        </h5>
-                    </header>
-                    <div className="w3-container">
-                        <p>Cool huh? Ok, enough teasing around..</p>
-                        <p>
-                            Go to our{" "}
-                            <a className="w3-text-teal" href="/w3css/default.asp">
-                                W3.CSS Tutorial
-                            </a>{" "}
-                            to learn more!
-                        </p>
-                    </div>
-                    <footer className="w3-container w3-teal">
-                        <p>Modal footer</p>
-                    </footer>
-                </div>
-            </div>
-            {/* Team Container */}
             <div className="w3-container w3-padding-64 w3-center" id="team">
                 <h2>ĐỘI NGŨ CỦA CHÚNG TÔI</h2>
                 <div className="w3-row">
@@ -341,66 +314,7 @@ const Homepage = () => {
                 </div>
             </div>
             {/* Contact Container */}
-            <div className="w3-container w3-padding-64 w3-theme-l5" id="contact">
-                <div className="w3-row">
-                    <div className="w3-col m5">
-                        <div className="w3-padding-16">
-                            <span className="w3-xlarge w3-border-teal w3-bottombar">
-                                Contact Us
-                            </span>
-                        </div>
-                        <h3>Address</h3>
-                        <p>Swing by for a cup of coffee, or whatever.</p>
-                        <p>
-                            <i className="fa fa-map-marker w3-text-teal w3-xlarge" />
-                            &nbsp;&nbsp;Chicago, US
-                        </p>
-                        <p>
-                            <i className="fa fa-phone w3-text-teal w3-xlarge" />
-                            &nbsp;&nbsp;+00 1515151515
-                        </p>
-                        <p>
-                            <i className="fa fa-envelope-o w3-text-teal w3-xlarge" />
-                            &nbsp;&nbsp;test@test.com
-                        </p>
-                    </div>
-                    <div className="w3-col m7">
-                        <form
-                            className="w3-container w3-card-4 w3-padding-16 w3-white"
-                            action="/action_page.php"
-                            target="_blank"
-                        >
-                            <div className="w3-section">
-                                <label>Name</label>
-                                <input className="w3-input" type="text" name="Name" required="" />
-                            </div>
-                            <div className="w3-section">
-                                <label>Email</label>
-                                <input className="w3-input" type="text" name="Email" required="" />
-                            </div>
-                            <div className="w3-section">
-                                <label>Message</label>
-                                <input
-                                    className="w3-input"
-                                    type="text"
-                                    name="Message"
-                                    required=""
-                                />
-                            </div>
-                            <input
-                                className="w3-check"
-                                type="checkbox"
-                                defaultChecked=""
-                                name="Like"
-                            />
-                            <label>I Like it!</label>
-                            <button type="submit" className="w3-button w3-right w3-theme">
-                                Send
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            
             {/* Image of location/map */}
             <img
                 src="/w3images/map.jpg"
@@ -408,8 +322,9 @@ const Homepage = () => {
                 style={{ width: "100%" }}
             />
             {/* Footer */}
-            <footer className="w3-container w3-padding-32 w3-theme-d1 w3-center">
-                <h4>Follow Us</h4>
+            <footer className="w3-container w3-padding-32 w3-theme-d1 w3-center bg-black ">
+                <h4 className="text-light d-flex justify-content-center">Follow Us</h4>
+                <div className="d-flex justify-content-center">
                 <a
                     className="w3-button w3-large w3-teal"
                     href="javascript:void(0)"
@@ -445,12 +360,9 @@ const Homepage = () => {
                 >
                     <i className="fa fa-linkedin" />
                 </a>
-                <p>
-                    Powered by{" "}
-                    <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">
-                        w3.css
-                    </a>
-                </p>
+                </div>
+                
+                
                 <div
                     style={{ position: "relative", bottom: 100, zIndex: 1 }}
                     className="w3-tooltip w3-right"
